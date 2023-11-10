@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  mysql-container:
+    image: mysql
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: rhkfh1
+      MYSQL_DATABASE: local
+      MYSQL_CHARSET: utf8mb4
+      MYSQL_COLLATION: utf8mb4_unicode_ci
+      TZ: Asia/Seoul
+    ports:
+      - "3306:3306"
+    restart: always
